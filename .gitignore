@@ -1,3 +1,6 @@
 *.pyc
 __pycache__
 /results/
+/data/preload/
+jupyter.log
+.env

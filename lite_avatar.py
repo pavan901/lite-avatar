@@ -36,7 +36,7 @@ def geneHeadInfo(sampleRate, bits, sampleNum):
 class liteAvatar(object):
     def __init__(self,
                  data_dir=None,
-                 language='ZH',
+                 language='EN',
                  a2m_path=None,
                  num_threads=1,
                  use_bg_as_idle=False,

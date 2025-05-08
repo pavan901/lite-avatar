@@ -47,7 +47,7 @@ multidict==6.1.0
 multiprocess==0.70.14
 networkx==3.2.1
 numba==0.60.0
-numpy==1.23.0
+numpy
 omegaconf==2.3.0
 onnxruntime==1.20.1
 openai-whisper==20240930
@@ -59,7 +59,7 @@ pillow==10.2.0
 platformdirs==4.3.6
 pooch==1.8.2
 propcache==0.2.1
-protobuf==5.29.3
+protobuf
 pyarrow==19.0.0
 pycparser==2.22
 pycryptodome==3.21.0
@@ -84,10 +84,10 @@ tensorboardX==2.6.2.2
 threadpoolctl==3.5.0
 tiktoken==0.8.0
 tomli==2.2.1
-torch==2.1.1+cu118
+# torch==2.1.1+cu118
 torch-complex==0.4.4
-torchaudio==2.1.1+cu118
-torchvision==0.16.1+cu118
+#torchaudio==2.1.1+cu118
+#torchvision==0.16.1+cu118
 tqdm==4.67.1
 triton==2.1.0
 typeguard==2.13.3
@@ -98,3 +98,6 @@ Wave==0.0.2
 xxhash==3.5.0
 yapf==0.43.0
 yarl==1.18.3
+mediapipe==0.10.21
+python-dotenv==1.0.1
+asyncio==3.4.3

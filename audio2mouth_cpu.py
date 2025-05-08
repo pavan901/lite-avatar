@@ -50,15 +50,13 @@ class Audio2Mouth(object):
         return rHeadInfo
     
     def inference(self, subtitles=None, input_audio=None):
-        f1 = time.time()
-
-        frame_cnt = int(len(input_audio) / 16000 * 30)
+        frame_cnt = max(int(len(input_audio) / 16000 * 30), 30)
         au_data = extract_para_feature(input_audio, frame_cnt)
         ph_data = np.zeros((au_data.shape[0], 2))
         
         audio_length = ph_data.shape[0] / 30
-        print('extract all feature in {}s'.format(round(time.time() - f1, 3)))
-        print('audio length: {}s'.format(round(audio_length, 3)))
+        # print('extract all feature in {}s'.format(round(time.time() - f1, 3)))
+        # print('audio length: {}s'.format(round(audio_length, 3)))
             
         param_res = []
         interval = 1.0
@@ -140,6 +138,6 @@ class Audio2Mouth(object):
 
         param_res = self.mouth_smooth(param_res)
         
-        print("generate {} frames in {}s with avg inference time {}ms/frame".format(len(param_res), round(time.time() - f1, 3), round((time.time() - f1) / len(param_res) * 1000, 3)))
+        # print("generate {} frames in {}s with avg inference time {}ms/frame".format(len(param_res), round(time.time() - f1, 3), round((time.time() - f1) / len(param_res) * 1000, 3)))
         
         return param_res, None, None

@@ -325,6 +325,6 @@ def extract_para_feature(audio, frame_cnt):
     batch_ = {"speech": torch.tensor(np.array([audio],dtype=np.float32)), 'frame_cnt': frame_cnt, "speech_lengths": torch.tensor(np.array([len(audio)]))}
     # print('batch_',batch_ )#;input('')
     results = speech2text(**batch_)
-    print('extract paraformer feature in {}ms'.format(round((time.time() - s),3)))
+    # print('extract paraformer feature in {}ms'.format(round((time.time() - s),3)))
     return results
 
